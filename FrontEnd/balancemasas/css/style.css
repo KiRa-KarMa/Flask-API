@@ -1,0 +1,695 @@
+    @font-face {
+        font-family: Multi;
+        src: url(./fuentes/nutandme/Muli-Black.ttf), url(./fuentes/nutandme/Muli-Bold.ttf), url(./fuentes/nutandme/Muli-ExtraBold.ttf), url(./fuentes/nutandme/Muli-Medium.ttf), url(./fuentes/nutandme/Muli-SemiBold.ttf);
+    }
+    
+    .INICIO {
+        position: absolute;
+        top: 19.55%;
+        left: 1%;
+    }
+    
+    .azul {
+        background-color: #D8ECD7;
+    }
+    
+    .azulclaro {
+        background-color: lightcyan;
+    }
+    
+    .tablaINI {
+        border: 0;
+        font-size: 57px;
+        text-align: center;
+    }
+    
+    .tablaINI td {
+        border: 2px solid black;
+    }
+    
+    .titulosInicio {
+        font-size: 50px;
+        font-family: Multi;
+    }
+    
+    .menuSub {
+        position: absolute;
+        background-color: #28325D;
+        top: 13%;
+        left: 0;
+        width: 100%;
+        height: 1.5em;
+        color: #28325D;
+        font-size: 2.525em;
+        font-family: Multi;
+        font-style: bold;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    
+    .entradaRep {
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        z-index: 1000;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    .entradaRepeladoPRD1 {
+        position: absolute;
+        top: 38%;
+        left: 25%;
+        font-size: 150%;
+        width: 70%;
+        height: 9%;
+    }
+    
+    .inputEntradaRepeladoPRD1 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contEntradaRepeladoFondoPRD1 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contEntradaRepeladoPRD1 {
+        position: absolute;
+        top: 4.5%;
+        left: 0.75%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .salidaRepPF {
+        position: absolute;
+        top: 50%;
+        left: 27%;
+        z-index: 1000;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    .salidaRepeladoPF {
+        position: absolute;
+        top: 48%;
+        left: 25%;
+        font-size: 150%;
+        width: 70%;
+        height: 9%;
+    }
+    
+    .inputSalidaRepeladoPF {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaRepeladoFondoPF {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaRepeladoPF {
+        position: absolute;
+        top: 4.5%;
+        left: 0.75%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .balanceRepelado2 {
+        position: absolute;
+        top: 38%;
+        background-color: cornflowerblue;
+        left: 5%;
+        border: darkblue solid 1px;
+        width: 19%;
+        height: 9%;
+    }
+    
+    .balanceRepelado2 input {
+        font-size: 63px;
+        margin-top: 2%;
+        color: white;
+    }
+    
+    .subprodRepeladolabel {
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        font-size: xx-large;
+    }
+    
+    .labelRepeladoSUBP1 {
+        position: absolute;
+        font-size: 63px;
+        font-weight: bolder;
+        color: green;
+        left: 66%;
+        top: 62%;
+    }
+    
+    .labelRepeladoSUBP2 {
+        position: absolute;
+        font-size: 63px;
+        font-weight: bolder;
+        color: green;
+        left: 66%;
+        top: 72%;
+    }
+    
+    .labelRepeladoSUBP3 {
+        position: absolute;
+        font-size: 63px;
+        font-weight: bolder;
+        color: green;
+        left: 66%;
+        top: 82%;
+    }
+    
+    .salidabalanceRepeladoSUBPRD1 {
+        position: absolute;
+        top: 62%;
+        left: 5%;
+        font-size: 150%;
+        width: 50%;
+        height: 9%;
+    }
+    
+    .inputRepeladoSUBPRD1 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaRepeladoFondoSUBPRD1 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaRepeladoSUBPRD1 {
+        position: absolute;
+        top: 4.75%;
+        left: 0.5%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .salidabalanceRepeladoSUBPRD2 {
+        position: absolute;
+        top: 72%;
+        left: 5%;
+        font-size: 150%;
+        width: 50%;
+        height: 9%;
+    }
+    
+    .inputRepeladoSUBPRD2 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaRepeladoFondoSUBPRD2 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaRepeladoSUBPRD2 {
+        position: absolute;
+        top: 4.75%;
+        left: 0.5%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .salidabalanceRepeladoSUBPRD3 {
+        position: absolute;
+        top: 82%;
+        left: 5%;
+        font-size: 150%;
+        width: 50%;
+        height: 9%;
+    }
+    
+    .inputRepeladoSUBPRD3 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaRepeladoFondoSUBPRD3 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaRepeladoSUBPRD3 {
+        position: absolute;
+        top: 4.75%;
+        left: 0.5%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .entradaCorte {
+        position: absolute;
+        top: 38%;
+        font-size: xx-large;
+        left: 5%;
+    }
+    
+    .balanceCorte {
+        position: absolute;
+        top: 42%;
+        background-color: cornflowerblue;
+        left: 5%;
+        border: darkblue solid 1px;
+        width: 19%;
+        height: 9%;
+    }
+    
+    .balanceCorte input {
+        font-size: 63px;
+        margin-top: 2%;
+        color: white;
+    }
+    
+    .balanceCorte2 {
+        position: absolute;
+        top: 53%;
+        background-color: cornflowerblue;
+        left: 5%;
+        border: darkblue solid 1px;
+        width: 19%;
+        height: 9%;
+    }
+    
+    .balanceCorte2 input {
+        font-size: 63px;
+        margin-top: 2%;
+        color: white;
+    }
+    
+    .salidaBalanceCortePRD {
+        position: absolute;
+        top: 42%;
+        left: 25.5%;
+        font-size: 150%;
+        width: 69.5%;
+        height: 20%;
+    }
+    
+    .inputCorte {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 300%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 29%;
+        left: 17.25%;
+        text-align: center;
+    }
+    
+    .contSalidaCorteFondo {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaCorte {
+        position: absolute;
+        top: 4.75%;
+        left: 0.75%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .subprodCortelabel {
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        font-size: xx-large;
+    }
+    
+    .labelCorteSUBP1 {
+        position: absolute;
+        font-size: 63px;
+        font-weight: bolder;
+        color: green;
+        left: 66%;
+        top: 72%;
+    }
+    
+    .labelCorteSUBP2 {
+        position: absolute;
+        font-size: 63px;
+        font-weight: bolder;
+        color: green;
+        left: 66%;
+        top: 85%;
+    }
+    
+    .salidaBalanceCorteSUBPRD1 {
+        position: absolute;
+        top: 72%;
+        left: 5%;
+        font-size: 150%;
+        width: 50%;
+        height: 9%;
+    }
+    
+    .inputCorteSUBPRD1 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaCorteFondoSUBPRD1 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaCorteSUBPRD1 {
+        position: absolute;
+        top: 4.75%;
+        left: 0.5%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .salidaBalanceCorteSUBPRD2 {
+        position: absolute;
+        top: 85%;
+        left: 5%;
+        font-size: 150%;
+        width: 50%;
+        height: 9%;
+    }
+    
+    .inputCorteSUBPRD2 {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 250%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 9%;
+        left: 8.5%;
+        text-align: center;
+    }
+    
+    .contSalidaCorteFondoSUBPRD2 {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaCorteSUBPRD2 {
+        position: absolute;
+        top: 4.75%;
+        left: 0.5%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .tituloEntradaGranHar {
+        position: absolute;
+        top: 56%;
+        left: 5%;
+        font-size: xx-large;
+    }
+    
+    .entGranHar {
+        position: absolute;
+        top: 63%;
+        background-color: cornflowerblue;
+        left: 5%;
+        border: darkblue solid 1px;
+        width: 19%;
+        height: 10%;
+    }
+    
+    .entGranHar2 {
+        position: absolute;
+        top: 75%;
+        background-color: cornflowerblue;
+        left: 5%;
+        border: darkblue solid 1px;
+        width: 19%;
+        height: 10%;
+    }
+    
+    .entGranHar input {
+        font-size: 63px;
+        margin-top: 3%;
+        color: white;
+    }
+    
+    .entGranHar2 input {
+        font-size: 63px;
+        margin-top: 3%;
+        color: white;
+    }
+    
+    .salidaBalanceGraHar {
+        position: absolute;
+        top: 63%;
+        left: 25.5%;
+        font-size: 150%;
+        width: 69.5%;
+        height: 22%;
+    }
+    
+    .inputGraHar {
+        position: absolute;
+        color: white;
+        /* 1 pixel black shadow to left, top, right and bottom */
+        text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+        font-size: 300%;
+        z-index: 1000;
+        font-weight: bolder;
+        top: 29%;
+        left: 17.25%;
+        text-align: center;
+    }
+    
+    .contSalidaFondo {
+        height: 100%;
+        width: 100.2%;
+        background-color: turquoise;
+    }
+    
+    .contSalidaGranHar {
+        position: absolute;
+        top: 4.5%;
+        left: 1%;
+        background-color: #D8ECD7;
+        height: 90%;
+        max-width: 102.5%;
+    }
+    
+    .contenedorResumenGraHar {
+        position: absolute;
+        width: 89%;
+        height: 20%;
+        top: 2.5%;
+        left: 4.5%;
+        background-color: #D8ECD7;
+        margin-top: 11.5%;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 1.5%;
+    }
+    
+    .OT {
+        position: absolute;
+        top: 36%;
+        font-size: 70px;
+        left: 2%;
+        color: #22B14C;
+    }
+    
+    .inputOT {
+        position: absolute;
+        top: 35%;
+        font-size: 70px;
+        left: 10.5%;
+        text-decoration: none;
+        font-weight: bold;
+        border: none;
+        background-color: transparent;
+    }
+    
+    .ObjetivOT {
+        position: absolute;
+        top: 36%;
+        left: 22.5%;
+        font-size: 70px;
+        color: #22B14C;
+    }
+    
+    .inputObjetivOT {
+        position: absolute;
+        top: 35%;
+        font-weight: bold;
+        font-size: 70px;
+        left: 45.5%;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+    }
+    
+    .HoraIniOT {
+        position: absolute;
+        top: 36%;
+        left: 59.5%;
+        font-size: 70px;
+        color: #22B14C;
+    }
+    
+    .inputHoraOT {
+        position: absolute;
+        font-size: 70px;
+        top: 35%;
+        font-weight: bold;
+        left: 87%;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+        width: 12%;
+    }
+    
+    .contenedorResumenCorteRep {
+        position: absolute;
+        width: 91%;
+        height: 11.5%;
+        left: 4.5%;
+        background-color: #D8ECD7;
+        margin-top: 11.5%;
+        font-weight: bold;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    
+    .OTCorteRep {
+        position: absolute;
+        top: 18%;
+        font-size: 70px;
+        left: 2%;
+        color: #22B14C;
+    }
+    
+    .inputOTCorteRep {
+        position: absolute;
+        top: 17%;
+        font-size: 70px;
+        left: 10.5%;
+        text-decoration: none;
+        font-weight: bold;
+        border: none;
+        background-color: transparent;
+    }
+    
+    .ObjetivOTCorteRep {
+        position: absolute;
+        top: 18%;
+        left: 22.5%;
+        font-size: 70px;
+        color: #22B14C;
+    }
+    
+    .inputObjetivOTCorteRep {
+        position: absolute;
+        top: 17%;
+        font-weight: bold;
+        font-size: 70px;
+        left: 45.5%;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+    }
+    
+    .HoraIniOTCorteRep {
+        position: absolute;
+        top: 18%;
+        left: 59.5%;
+        font-size: 70px;
+        color: #22B14C;
+    }
+    
+    .inputHoraOTCorteRep {
+        position: absolute;
+        font-size: 70px;
+        top: 17%;
+        font-weight: bold;
+        left: 87%;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+        width: 12%;
+    }

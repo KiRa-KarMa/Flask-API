@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controllers &mdash; documentación - </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="URL" href="Common_URL.html" />
+    <link rel="prev" title="Coms" href="Common_Coms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Documentación
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AutoDetox:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Common_Coms.html">Coms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common.Controllers.GetUsers.getEmpleados"><code class="docutils literal notranslate"><span class="pre">getEmpleados()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.Controllers.GetUserRole.getUserRole"><code class="docutils literal notranslate"><span class="pre">getUserRole()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.Controllers.GetSchemas.getSchemas"><code class="docutils literal notranslate"><span class="pre">getSchemas()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.Controllers.GetTables.getTables"><code class="docutils literal notranslate"><span class="pre">getTables()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Common_URL.html">URL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Models.html">Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ExcelToSAP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EffortAndGratitude:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_URL.html">URL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Controllers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Common_Controllers.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="controllers">
+<h1>Controllers<a class="headerlink" href="#controllers" title="Enlace permanente a este encabezado"></a></h1>
+<p>Este modulo contiene los ficheros con las funciones de los endpoints comunes</p>
+<p>Fichero GetUsers:</p>
+<span class="target" id="module-common.Controllers.GetUsers"></span><dl class="py function">
+<dt class="sig sig-object py" id="common.Controllers.GetUsers.getEmpleados">
+<span class="sig-prename descclassname"><span class="pre">common.Controllers.GetUsers.</span></span><span class="sig-name descname"><span class="pre">getEmpleados</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.Controllers.GetUsers.getEmpleados" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Esta función se encarga de devolver una respuesta con los empleados que
+están ahora mismo activos. Esta respuesta tiene en la cabecera el valor
+content_type a application/json y el valor obtenido de la base de datos
+en formato json</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>respuesta con los datos preparados</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero GetUserRole:</p>
+<span class="target" id="module-common.Controllers.GetUserRole"></span><dl class="py function">
+<dt class="sig sig-object py" id="common.Controllers.GetUserRole.getUserRole">
+<span class="sig-prename descclassname"><span class="pre">common.Controllers.GetUserRole.</span></span><span class="sig-name descname"><span class="pre">getUserRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.Controllers.GetUserRole.getUserRole" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Esta función se encarga de devolver una respuesta con las vistas y las
+herramientas a las que debe tener acceso el empleado que se le pasa
+como parametro</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>respuesta con los datos preparados</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero GetSchemas:</p>
+<span class="target" id="module-common.Controllers.GetSchemas"></span><dl class="py function">
+<dt class="sig sig-object py" id="common.Controllers.GetSchemas.getSchemas">
+<span class="sig-prename descclassname"><span class="pre">common.Controllers.GetSchemas.</span></span><span class="sig-name descname"><span class="pre">getSchemas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.Controllers.GetSchemas.getSchemas" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Controlador de common que conecta con la BD y llama a la función que realiza la consulta y obtiene todas las BD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>lista de todas las BD</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero GetTables:</p>
+<span class="target" id="module-common.Controllers.GetTables"></span><dl class="py function">
+<dt class="sig sig-object py" id="common.Controllers.GetTables.getTables">
+<span class="sig-prename descclassname"><span class="pre">common.Controllers.GetTables.</span></span><span class="sig-name descname"><span class="pre">getTables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.Controllers.GetTables.getTables" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Controlador de common que conecta con la BD y llama a la función que realiza la consulta y obtiene todas las tablas de BD indicada por parámetro.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>database</strong> – Nombre de la base de datos de la que queremos sacar las tablas</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>lista de todas las tablas de la BD</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="Common_Coms.html" class="btn btn-neutral float-left" title="Coms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="Common_URL.html" class="btn btn-neutral float-right" title="URL" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Kirill Zhiganov</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación de la API Calconut &mdash; documentación - </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Coms" href="AutoDetox_Coms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Documentación
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AutoDetox:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Common_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_URL.html">URL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Models.html">Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ExcelToSAP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EffortAndGratitude:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_URL.html">URL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Documentación de la API Calconut</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentacion-de-la-api-calconut">
+<h1>Documentación de la API Calconut<a class="headerlink" href="#documentacion-de-la-api-calconut" title="Enlace permanente a este encabezado"></a></h1>
+<p>Esta es la documentación de la API de Calconut.</p>
+<p>Esta API cumple la función de back-end del despliegue CalcoTools.
+Funciona gracias al framework Flask, framework que se encarga de
+generar un servicio web API a la que se puede acceder mediante una petición HTTPS.</p>
+<p>Todas las llamadas a la API tienen que tener una cabecera llamada x-api-key que tiene
+que tener el valor de la api key para acceder a los recuros. Esta api key será proporcionada
+por un encargado de IT.</p>
+<p>Los endpoints tendrán la siguiente estructura:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/NombreDeProyecto/endpoint</span></code></p></li>
+</ul>
+<p>Cabe destacar que los endpoints de uso general no tienen nombre de proyecto, por lo que
+se pondrá el endpoint directamente.</p>
+<p>Los endpoints usables actualmente son los siguientes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/GetUsers</span></code>: haciendo una llamada a este endpoint(con un método GET), obtenemos una lista de los empleados activos actualmente</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/GetUserRole</span></code>: haciendo una llamada a este endpoint(con un método GET), y enviando el id del usuario en el body, obtenemos una lista de los roles y las herramientas que el usuario tiene disponibles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/AutoDetox/GetCurrentDetox</span></code>: haciendo una llamada a este endpoint(con un método GET) obtenemos una lista de los detox activos actualmente</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/AutoDetox/PostDetox</span></code>: haciendo una llamada a este endpoint(con un método POST), y enviando los datos del detox necesarios en el cuerpo, podemos dar de alta un detox en la base de datos</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/ExcelToSAP/LoadData</span></code>: haciendo una llamada a este endpoint(con un metodo POST), leemos el Excel subido y actualizamos SAP</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/ExcelToSAP/GetTemplates</span></code>: haciendo una llamada a este endpoint(con un metodo GET), nos devolverá un excel segun la BD y la tabla elegida.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/GetTablesfromDB</span></code>: haciendo una llamada a este endpoint(con un metodo GET), nos devolverá todas las tablas de la BD elegida.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/GetSchemas</span></code>: haciendo una llamada a este endpoint(con un metodo GET), nos devolverá todas las BD.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/GetUserEAndGPoints</span></code>: haciendo una llamada a este endpoint(con un metodo GET), nos devolverá los puntos y los motivos de EffortAndGratitude.</p></li>
+</ul>
+</section>
+<section id="descripcion">
+<h1>Descripción:<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h1>
+<p><em>AutoDetox:</em> Este porograma aplica Detox a los correos cuyos usuarios están de baja o de vacaciones.</p>
+<p><em>Common:</em> Libreria de funciones en común que usan todas las aplicaciones.</p>
+<p><em>ExcelToSAP:</em> Este programa recibe un Excel, obtiene sus datos y los sube a SAP.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">AutoDetox:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Coms.html">Coms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.DeltaTemplate"><code class="docutils literal notranslate"><span class="pre">DeltaTemplate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.altaDetox"><code class="docutils literal notranslate"><span class="pre">altaDetox()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.altaExcepciones"><code class="docutils literal notranslate"><span class="pre">altaExcepciones()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.getDetoxFromDB"><code class="docutils literal notranslate"><span class="pre">getDetoxFromDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.getDetoxTablaFromDB"><code class="docutils literal notranslate"><span class="pre">getDetoxTablaFromDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.getExcepciones"><code class="docutils literal notranslate"><span class="pre">getExcepciones()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.getLastID"><code class="docutils literal notranslate"><span class="pre">getLastID()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Coms.html#AutoDetox.coms.db_coms.strfdelta"><code class="docutils literal notranslate"><span class="pre">strfdelta()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Controllers.html">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Controllers.html#AutoDetox.Controllers.GetCurrentDetox.getDetox"><code class="docutils literal notranslate"><span class="pre">getDetox()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_Controllers.html#AutoDetox.Controllers.PostDetox.subirDetox"><code class="docutils literal notranslate"><span class="pre">subirDetox()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_URL.html">URL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_URL.html#AutoDetox.urls.addDetox"><code class="docutils literal notranslate"><span class="pre">addDetox()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_URL.html#AutoDetox.urls.getDetoxTabla"><code class="docutils literal notranslate"><span class="pre">getDetoxTabla()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="AutoDetox_URL.html#AutoDetox.urls.listaDetox"><code class="docutils literal notranslate"><span class="pre">listaDetox()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Common_Coms.html">Coms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.db_coms.conectarMariaDB"><code class="docutils literal notranslate"><span class="pre">conectarMariaDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.db_coms.conectar_MariaDB"><code class="docutils literal notranslate"><span class="pre">conectar_MariaDB</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.db_coms.getEmpleadosFromDB"><code class="docutils literal notranslate"><span class="pre">getEmpleadosFromDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.db_coms.get_hashed_key"><code class="docutils literal notranslate"><span class="pre">get_hashed_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.db_coms.get_viewFromUser"><code class="docutils literal notranslate"><span class="pre">get_viewFromUser()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.hanaconnect.conectar_HanaDB"><code class="docutils literal notranslate"><span class="pre">conectar_HanaDB</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.hanaconnect.getSchemasBD"><code class="docutils literal notranslate"><span class="pre">getSchemasBD()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.hanaconnect.getTablesBD"><code class="docutils literal notranslate"><span class="pre">getTablesBD()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Coms.html#common.coms.hanaconnect.hanaConnection"><code class="docutils literal notranslate"><span class="pre">hanaConnection()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Controllers.html">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Common_Controllers.html#common.Controllers.GetUsers.getEmpleados"><code class="docutils literal notranslate"><span class="pre">getEmpleados()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Controllers.html#common.Controllers.GetUserRole.getUserRole"><code class="docutils literal notranslate"><span class="pre">getUserRole()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Controllers.html#common.Controllers.GetSchemas.getSchemas"><code class="docutils literal notranslate"><span class="pre">getSchemas()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Controllers.html#common.Controllers.GetTables.getTables"><code class="docutils literal notranslate"><span class="pre">getTables()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Common_URL.html">URL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Common_URL.html#common.urls.GetSchemesFromBD"><code class="docutils literal notranslate"><span class="pre">GetSchemesFromBD()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_URL.html#common.urls.GetTables"><code class="docutils literal notranslate"><span class="pre">GetTables()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_URL.html#common.urls.get_user_role"><code class="docutils literal notranslate"><span class="pre">get_user_role()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_URL.html#common.urls.listaEmpleados"><code class="docutils literal notranslate"><span class="pre">listaEmpleados()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_URL.html#common.urls.token_required"><code class="docutils literal notranslate"><span class="pre">token_required()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Models.html">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.ExcepcionMariadb"><code class="docutils literal notranslate"><span class="pre">ExcepcionMariadb</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.Prohibido"><code class="docutils literal notranslate"><span class="pre">Prohibido</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.Proximamente"><code class="docutils literal notranslate"><span class="pre">Proximamente</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.manejar405"><code class="docutils literal notranslate"><span class="pre">manejar405()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.manejarMariaDB"><code class="docutils literal notranslate"><span class="pre">manejarMariaDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.manejarProhibido"><code class="docutils literal notranslate"><span class="pre">manejarProhibido()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Common_Models.html#common.Models.error_handlers.manejarProximamente"><code class="docutils literal notranslate"><span class="pre">manejarProximamente()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">ExcelToSAP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Coms.html">Coms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Coms.html#ExcelToSAP.coms.hanaconnect.dictToSQLUpdate"><code class="docutils literal notranslate"><span class="pre">dictToSQLUpdate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Controllers.html">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.CustomError"><code class="docutils literal notranslate"><span class="pre">CustomError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.borraArchivoTemp"><code class="docutils literal notranslate"><span class="pre">borraArchivoTemp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.compruebaCelda"><code class="docutils literal notranslate"><span class="pre">compruebaCelda()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.excel_to_dict"><code class="docutils literal notranslate"><span class="pre">excel_to_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.excel_to_hanadb"><code class="docutils literal notranslate"><span class="pre">excel_to_hanadb()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData.obtenerTipos"><code class="docutils literal notranslate"><span class="pre">obtenerTipos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.GetColumns.getColumns"><code class="docutils literal notranslate"><span class="pre">getColumns()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.InventoryGen.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.InventoryGen.excel_to_SAPAPI"><code class="docutils literal notranslate"><span class="pre">excel_to_SAPAPI()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.InventoryGen.gestionErrores"><code class="docutils literal notranslate"><span class="pre">gestionErrores()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData_pack.CustomError"><code class="docutils literal notranslate"><span class="pre">CustomError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData_pack.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData_pack.excel_to_dict"><code class="docutils literal notranslate"><span class="pre">excel_to_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData_pack.excel_to_hanadb_pack"><code class="docutils literal notranslate"><span class="pre">excel_to_hanadb_pack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.LoadData_pack.productTreesProcessing"><code class="docutils literal notranslate"><span class="pre">productTreesProcessing()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.pedidos.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.pedidos.excel_to_SAP_pedidos"><code class="docutils literal notranslate"><span class="pre">excel_to_SAP_pedidos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_Controllers.html#ExcelToSAP.Controllers.pedidos.preparar_json"><code class="docutils literal notranslate"><span class="pre">preparar_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_URL.html">URL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_URL.html#ExcelToSAP.urls.getTemplates"><code class="docutils literal notranslate"><span class="pre">getTemplates()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_URL.html#ExcelToSAP.urls.sistema"><code class="docutils literal notranslate"><span class="pre">sistema()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_URL.html#ExcelToSAP.urls.upload_file"><code class="docutils literal notranslate"><span class="pre">upload_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExcelToSAP_URL.html#ExcelToSAP.urls.uploader"><code class="docutils literal notranslate"><span class="pre">uploader()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">EffortAndGratitude:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Coms.html">Coms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EffortAndGratitude_Coms.html#EffortAndGratitude.coms.db_coms.getDNI"><code class="docutils literal notranslate"><span class="pre">getDNI()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="EffortAndGratitude_Coms.html#EffortAndGratitude.coms.db_coms.getUserEAndGPoints"><code class="docutils literal notranslate"><span class="pre">getUserEAndGPoints()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Controllers.html">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EffortAndGratitude_Controllers.html#EffortAndGratitude.Controllers.getPointsEAG.getPointsEAG"><code class="docutils literal notranslate"><span class="pre">getPointsEAG()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_URL.html">URL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EffortAndGratitude_URL.html#EffortAndGratitude.urls.getUserEAndGPoints"><code class="docutils literal notranslate"><span class="pre">getUserEAndGPoints()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="AutoDetox_Coms.html" class="btn btn-neutral float-right" title="Coms" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Kirill Zhiganov</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

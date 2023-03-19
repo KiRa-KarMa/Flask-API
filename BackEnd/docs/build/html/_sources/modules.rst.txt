@@ -1,0 +1,7 @@
+AutoDetox
+=========
+
+.. toctree::
+   :maxdepth: 4
+
+   urls

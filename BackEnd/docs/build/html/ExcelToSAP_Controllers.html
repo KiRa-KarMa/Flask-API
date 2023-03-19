@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controllers &mdash; documentaciónlconut - </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="URL" href="ExcelToSAP_URL.html" />
+    <link rel="prev" title="Coms" href="ExcelToSAP_Coms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Documentación
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AutoDetox:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Common_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_URL.html">URL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Models.html">Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ExcelToSAP:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Coms.html">Coms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.CustomError"><code class="docutils literal notranslate"><span class="pre">CustomError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.borraArchivoTemp"><code class="docutils literal notranslate"><span class="pre">borraArchivoTemp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.compruebaCelda"><code class="docutils literal notranslate"><span class="pre">compruebaCelda()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.excel_to_dict"><code class="docutils literal notranslate"><span class="pre">excel_to_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.excel_to_hanadb"><code class="docutils literal notranslate"><span class="pre">excel_to_hanadb()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData.obtenerTipos"><code class="docutils literal notranslate"><span class="pre">obtenerTipos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.GetColumns.getColumns"><code class="docutils literal notranslate"><span class="pre">getColumns()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.InventoryGen.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.InventoryGen.excel_to_SAPAPI"><code class="docutils literal notranslate"><span class="pre">excel_to_SAPAPI()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.InventoryGen.gestionErrores"><code class="docutils literal notranslate"><span class="pre">gestionErrores()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData_pack.CustomError"><code class="docutils literal notranslate"><span class="pre">CustomError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData_pack.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData_pack.excel_to_dict"><code class="docutils literal notranslate"><span class="pre">excel_to_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData_pack.excel_to_hanadb_pack"><code class="docutils literal notranslate"><span class="pre">excel_to_hanadb_pack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.LoadData_pack.productTreesProcessing"><code class="docutils literal notranslate"><span class="pre">productTreesProcessing()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.pedidos.comprobar_excel"><code class="docutils literal notranslate"><span class="pre">comprobar_excel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.pedidos.excel_to_SAP_pedidos"><code class="docutils literal notranslate"><span class="pre">excel_to_SAP_pedidos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ExcelToSAP.Controllers.pedidos.preparar_json"><code class="docutils literal notranslate"><span class="pre">preparar_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EffortAndGratitude:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_URL.html">URL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Controllers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ExcelToSAP_Controllers.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="controllers">
+<h1>Controllers<a class="headerlink" href="#controllers" title="Enlace permanente a este encabezado"></a></h1>
+<p>Este modulo contiene los ficheros encargados de los endpoints del proyecto ExcelToSAP</p>
+<p>Fichero LoadData:</p>
+<span class="target" id="module-ExcelToSAP.Controllers.LoadData"></span><dl class="py exception">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.CustomError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">CustomError</span></span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.CustomError" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Excepción personalizada</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.borraArchivoTemp">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">borraArchivoTemp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.borraArchivoTemp" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Borra el archivo temporal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>filename</strong> – path del archivo temporal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.comprobar_excel">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">comprobar_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_excel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tabla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;ADV_EXPDATEMB'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.comprobar_excel" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Comprueba que el excel esté bien formado.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_excel</strong> – Diccionario con los datos del Excel</p></li>
+<li><p><strong>conn</strong> – Conexión con HanaDB</p></li>
+<li><p><strong>tabla</strong> – Tabla de la BD que necesitamos consultar, por defecto: &#64;ADV_EXPDATEMB</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista con los elementos, 1º codigo de devolucion que puede ser: {-1: Error, 1: OK}, 2º mensaje de respuesta</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.compruebaCelda">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">compruebaCelda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipoEnBD</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valorExcel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.compruebaCelda" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Comprueba que el tipo de celda sea correcto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tipoEnBD</strong> – tipo de dato en la BD</p></li>
+<li><p><strong>valorExcel</strong> – tipo de dato en Excel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>True o False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.excel_to_dict">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">excel_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.excel_to_dict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Lee un excel y devuelve un diccionario</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> – Path del Excel</p></li>
+<li><p><strong>sheet</strong> – Hoja del Excel a convertir en diccionario</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Diccionario con los datos del Excel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.excel_to_hanadb">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">excel_to_hanadb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.excel_to_hanadb" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Cuerpo del programa. Abrimos el archivo de excel, leemos los datos y
+actualizamos SAP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>Resultado de la ejecución en formato JSON.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData.obtenerTipos">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData.</span></span><span class="sig-name descname"><span class="pre">obtenerTipos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData.obtenerTipos" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene los tipos de las columnas de una tabla</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conn</strong> – Conexión con HanaDB</p></li>
+<li><p><strong>tabla</strong> – Tabla de la BD que necesitamos consultar</p></li>
+<li><p><strong>key_arr</strong> – Lista con los valores de la columna Code de Excel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista con los elementos, 1º codigo de devolucion que puede ser: {-1: Error, 1: OK}, 2º mensaje de respuesta</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero GetColumns:</p>
+<span class="target" id="module-ExcelToSAP.Controllers.GetColumns"></span><dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.GetColumns.getColumns">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.GetColumns.</span></span><span class="sig-name descname"><span class="pre">getColumns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.GetColumns.getColumns" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Función que nos devuelve el nombre de las columnas de una tabla</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bd</strong> – Nombre de la base de datos</p></li>
+<li><p><strong>table</strong> – Nombre de la tabla</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista con las columnas de la tabla</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero InventoryGen:</p>
+<span class="target" id="module-ExcelToSAP.Controllers.InventoryGen"></span><dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.InventoryGen.comprobar_excel">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.InventoryGen.</span></span><span class="sig-name descname"><span class="pre">comprobar_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cabecera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detalles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.InventoryGen.comprobar_excel" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Comprueba el excel en busca de errores, reune todos los errores y los devuelve en forma de lista.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cabecera</strong> – Cabecera del excel</p></li>
+<li><p><strong>detalles</strong> – Detalles del excel</p></li>
+<li><p><strong>sheets</strong> – Lista con el numero de hojas</p></li>
+<li><p><strong>conn</strong> – Conexión a SAP</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista de errores</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.InventoryGen.excel_to_SAPAPI">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.InventoryGen.</span></span><span class="sig-name descname"><span class="pre">excel_to_SAPAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.InventoryGen.excel_to_SAPAPI" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Cuerpo del ExcelToSAP para entrada y salida de mercancías. Abrimos el archivo de excel, leemos los datos y
+actualizamos SAP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> – La base de datos que se quiere actualizar.</p></li>
+<li><p><strong>sheets</strong> – Lista con el nombre de las hojas.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.InventoryGen.gestionErrores">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.InventoryGen.</span></span><span class="sig-name descname"><span class="pre">gestionErrores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">articulo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.InventoryGen.gestionErrores" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Gestiona los errores de los detalles del articulo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conn</strong> – Conexión con SAP</p></li>
+<li><p><strong>articulo</strong> – Datos del articulo en el excel</p></li>
+<li><p><strong>sheet_name</strong> – Nombre de la hoja</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista con errores encontrados</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero LoadData_pack:</p>
+<span class="target" id="module-ExcelToSAP.Controllers.LoadData_pack"></span><dl class="py exception">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData_pack.CustomError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData_pack.</span></span><span class="sig-name descname"><span class="pre">CustomError</span></span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData_pack.CustomError" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Excepción personalizada</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData_pack.comprobar_excel">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData_pack.</span></span><span class="sig-name descname"><span class="pre">comprobar_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_excel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tabla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;ADV_EXPDATEMB'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData_pack.comprobar_excel" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Comprueba que el excel esté bien formado</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData_pack.excel_to_dict">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData_pack.</span></span><span class="sig-name descname"><span class="pre">excel_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData_pack.excel_to_dict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Lee un excel y devuelve un diccionario</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData_pack.excel_to_hanadb_pack">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData_pack.</span></span><span class="sig-name descname"><span class="pre">excel_to_hanadb_pack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData_pack.excel_to_hanadb_pack" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Cuerpo del programa ExcelToSAP para creación de packs. Abrimos el archivo de excel, leemos los datos y
+actualizamos SAP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>database</strong> – Nombre de la base de datos que se quiere actualizar.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.LoadData_pack.productTreesProcessing">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.LoadData_pack.</span></span><span class="sig-name descname"><span class="pre">productTreesProcessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.LoadData_pack.productTreesProcessing" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Preparamos la lista de diccionarios del excel a una lista de diccionarios procesada para subirla a sap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>data</strong> – Datos del excel</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>lista de diccionarios lista para procesar</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero pedidos:</p>
+<span class="target" id="module-ExcelToSAP.Controllers.pedidos"></span><dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.pedidos.comprobar_excel">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.pedidos.</span></span><span class="sig-name descname"><span class="pre">comprobar_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cabecera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detalles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.pedidos.comprobar_excel" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Función que comprueba los datos del excel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cabecera</strong> – Datos sacados de la hoja del excel Cabecera</p></li>
+<li><p><strong>detalles</strong> – Datos sacados de la hoja del excel Detalles</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>lista de errores encontrados</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.pedidos.excel_to_SAP_pedidos">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.pedidos.</span></span><span class="sig-name descname"><span class="pre">excel_to_SAP_pedidos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.pedidos.excel_to_SAP_pedidos" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Cuerpo del ExcelToSAP para pedidos de clientes. Abrimos el archivo de excel, leemos los datos y
+actualizamos SAP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> – La base de datos que se quiere actualizar.</p></li>
+<li><p><strong>sheets</strong> – Lista con el nombre de las hojas.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ExcelToSAP.Controllers.pedidos.preparar_json">
+<span class="sig-prename descclassname"><span class="pre">ExcelToSAP.Controllers.pedidos.</span></span><span class="sig-name descname"><span class="pre">preparar_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cabecera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detalles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ExcelToSAP.Controllers.pedidos.preparar_json" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Función que prepara el json de entrada para la peticion a SAP</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cabecera</strong> – Datos sacados de la hoja del excel Cabecera</p></li>
+<li><p><strong>detalles</strong> – Datos sacados de la hoja del excel Detalles</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>lista de diccionarios con los datos preparados para la peticion</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="ExcelToSAP_Coms.html" class="btn btn-neutral float-left" title="Coms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="ExcelToSAP_URL.html" class="btn btn-neutral float-right" title="URL" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Kirill Zhiganov</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

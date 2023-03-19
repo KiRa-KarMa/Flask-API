@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coms &mdash; documentació<noscript></noscript> - </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Controllers" href="Common_Controllers.html" />
+    <link rel="prev" title="URL" href="AutoDetox_URL.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Documentación
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">AutoDetox:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AutoDetox_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Coms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.db_coms.conectarMariaDB"><code class="docutils literal notranslate"><span class="pre">conectarMariaDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.db_coms.conectar_MariaDB"><code class="docutils literal notranslate"><span class="pre">conectar_MariaDB</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.db_coms.getEmpleadosFromDB"><code class="docutils literal notranslate"><span class="pre">getEmpleadosFromDB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.db_coms.get_hashed_key"><code class="docutils literal notranslate"><span class="pre">get_hashed_key()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.db_coms.get_viewFromUser"><code class="docutils literal notranslate"><span class="pre">get_viewFromUser()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.hanaconnect.conectar_HanaDB"><code class="docutils literal notranslate"><span class="pre">conectar_HanaDB</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.hanaconnect.getSchemasBD"><code class="docutils literal notranslate"><span class="pre">getSchemasBD()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.hanaconnect.getTablesBD"><code class="docutils literal notranslate"><span class="pre">getTablesBD()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common.coms.hanaconnect.hanaConnection"><code class="docutils literal notranslate"><span class="pre">hanaConnection()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_URL.html">URL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Models.html">Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ExcelToSAP:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExcelToSAP_URL.html">URL</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EffortAndGratitude:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Coms.html">Coms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_Controllers.html">Controllers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EffortAndGratitude_URL.html">URL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Coms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Common_Coms.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="coms">
+<h1>Coms<a class="headerlink" href="#coms" title="Enlace permanente a este encabezado"></a></h1>
+<p>Este modulo contiene los ficheros con las funciones encargadas de las comunicaciones</p>
+<p>Fichero db_coms:</p>
+<span class="target" id="module-common.coms.db_coms"></span><dl class="py function">
+<dt class="sig sig-object py" id="common.coms.db_coms.conectarMariaDB">
+<span class="sig-prename descclassname"><span class="pre">common.coms.db_coms.</span></span><span class="sig-name descname"><span class="pre">conectarMariaDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3306</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.db_coms.conectarMariaDB" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Establecemos una conexion a mariadb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> – ip del host</p></li>
+<li><p><strong>user</strong> – usuario</p></li>
+<li><p><strong>password</strong> – contraseña</p></li>
+<li><p><strong>db</strong> – nombre de la base de datos</p></li>
+<li><p><strong>port</strong> – puerto de conexion. Por defecto 3306</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>conexión a la base de datos</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="common.coms.db_coms.conectar_MariaDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">common.coms.db_coms.</span></span><span class="sig-name descname"><span class="pre">conectar_MariaDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3306</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.db_coms.conectar_MariaDB" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Contextmanager para conectar a MariaDB. Esta clase se encarga de
+iniciar las conexiones y cerrarlas de forma automatica.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.db_coms.getEmpleadosFromDB">
+<span class="sig-prename descclassname"><span class="pre">common.coms.db_coms.</span></span><span class="sig-name descname"><span class="pre">getEmpleadosFromDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conexion</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.db_coms.getEmpleadosFromDB" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtenemos los empleados de la base de datos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>conexion</strong> – Conexion al servidor de la base de datos</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>Lista de diccionarios con los datos de los empleados de</p>
+</dd>
+</dl>
+<p>la base de datos</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.db_coms.get_hashed_key">
+<span class="sig-prename descclassname"><span class="pre">common.coms.db_coms.</span></span><span class="sig-name descname"><span class="pre">get_hashed_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conexion</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.db_coms.get_hashed_key" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtenemos la api key y la sal de la base de datos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>conexion</strong> – Conexion a la base de datos</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>contraseña hasheada y la sal</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.db_coms.get_viewFromUser">
+<span class="sig-prename descclassname"><span class="pre">common.coms.db_coms.</span></span><span class="sig-name descname"><span class="pre">get_viewFromUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conexion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.db_coms.get_viewFromUser" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtenemos las vistas y herramientas a las que tiene acceso el usuario
+indicado como parametro de la función</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conexion</strong> – Conexion a la base de datos</p></li>
+<li><p><strong>usuario</strong> – Usuario del que queremos obtener la informacion</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>diccionario con lista de excepciones</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero hanaconnect:</p>
+<span class="target" id="module-common.coms.hanaconnect"></span><dl class="py class">
+<dt class="sig sig-object py" id="common.coms.hanaconnect.conectar_HanaDB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">common.coms.hanaconnect.</span></span><span class="sig-name descname"><span class="pre">conectar_HanaDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3306</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.hanaconnect.conectar_HanaDB" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>ContextManager de las conexiones de HanaDB</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.hanaconnect.getSchemasBD">
+<span class="sig-prename descclassname"><span class="pre">common.coms.hanaconnect.</span></span><span class="sig-name descname"><span class="pre">getSchemasBD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conexion</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.hanaconnect.getSchemasBD" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtenemos todas las BD mediante la consulta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>conexion</strong> – Conexion a la base de datos</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>schemes BD</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.hanaconnect.getTablesBD">
+<span class="sig-prename descclassname"><span class="pre">common.coms.hanaconnect.</span></span><span class="sig-name descname"><span class="pre">getTablesBD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conexion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.hanaconnect.getTablesBD" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtenemos todas las tablas de la BD mediante la consulta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>conexion</strong> – Conexion a la base de datos</p>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>schemes BD</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="common.coms.hanaconnect.hanaConnection">
+<span class="sig-prename descclassname"><span class="pre">common.coms.hanaconnect.</span></span><span class="sig-name descname"><span class="pre">hanaConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passwd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.coms.hanaconnect.hanaConnection" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Establecemos una conexion a hanadb</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> – ip del host</p></li>
+<li><p><strong>port</strong> – puerto de conexion</p></li>
+<li><p><strong>user</strong> – usuario</p></li>
+<li><p><strong>passwd</strong> – contraseña</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>conexión a la base de datos</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Fichero sap_coms:</p>
+<span class="target" id="module-common.coms.sap_coms"></span></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="AutoDetox_URL.html" class="btn btn-neutral float-left" title="URL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="Common_Controllers.html" class="btn btn-neutral float-right" title="Controllers" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Kirill Zhiganov</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

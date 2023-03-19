@@ -1,0 +1,1 @@
+Las imágenes tienen que tener un tamaño máximo de 305 de ancho y 205 de alto.
